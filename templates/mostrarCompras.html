@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+{% block content %}
+
+<div class="product-list">
+    {% if mostrarCompras %}
+        {% for compras in mostrarCompras %}
+        <div class="product-item">
+            <h2>CLIENTE -> {{ compras.cliente }}</h2>
+            <p>VALOR PAGO: R$ {{ compras.valorPago }}</p>
+            <p>PRODUTO COMPRADO: {{ compras.produtoComprado }}</p>
+            <p>QUANTIDADE COMPRADO: {{ compras.quantidadeProdutos }}</p> 
+            <p>STATUS DE PAGAMENTO: {{ compras.pagamento|yesno:"Pago,Não Pago" }}</p><br>
+
+            <a href="{% url 'editarCompras' compras.id %}" class="edit-link">
+                <i class="fas fa-pencil-alt"></i>
+            </a>
+
+            <a href="{% url 'deletarCompra' compras.id %}" class="delete-link" onclick="return confirm('Tem certeza que deseja deletar?')">
+                <i class="fas fa-trash"></i>
+            </a>
+            
+            {% if not compras.pagamento %}
+                <form action="{% url 'marcar_pagamento' compras.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-primary">Marcar como Pago</button>
+                </form>
+            {% endif %}
+        </div>
+        {% endfor %}
+    {% else %}
+        <h2>Não há compras disponíveis</h2>
+    {% endif %}
+</div><br>
+
+<a href="/cadastrarCompras/" class="submenu-link">Cadastrar Compra</a>
+<a href="/" class="submenu-link">Início</a> 
+
+{% endblock content %}
+        

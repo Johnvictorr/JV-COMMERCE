@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+{% block content %}
+    <h2>Tem certeza que deseja deletar o cliente {{ cliente.nome }}?</h2><br>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Deletar</button>
+        <a href="{% url 'mostrarClientes' %}" style="padding: 15px;
+                                                margin: 10px 0;
+                                                background-color: #003e7e;
+                                                color: white;
+                                                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                                                font-size: 20px;
+                                                text-align: center;
+                                                border: 1px solid #ccc;
+                                                border-radius: 5px;
+                                                cursor: pointer;
+                                                transition: background-color 0.3s, transform 0.3s;
+                                                text-decoration: none;"
+                                                onmouseover="this.style.backgroundColor='#0056a4'; this.style.transform='translateY(-2px)';"
+                                                onmouseout="this.style.backgroundColor='#003e7e'; this.style.transform='translateY(0)';">
+                                                Cancelar</a>
+    </form>
+{% endblock content %}

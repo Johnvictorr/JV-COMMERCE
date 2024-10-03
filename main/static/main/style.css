@@ -1,0 +1,226 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: whitesmoke;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 50%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo{
+    font-size: 20px;
+}
+
+header {
+    background-color: #003e7e;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 1px 1px 7px gray;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+header .container a{
+    color: white;
+    text-decoration: none;
+}
+
+header .logo {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 10px;
+    transition: background-color 0.3s ease;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header nav a:hover {
+    background-color: #002b5c;
+}
+
+main {
+    flex: 1;
+    padding: 20px 0;
+}
+
+main .container {
+    background-color: whitesmoke;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 7px gray;
+}
+
+h2 {
+    font-size: 30px;
+    color: #003e7e;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #003e7e;
+    padding-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.submenu-link {
+    display: block;
+    width: 94%;
+    margin: 10px 0;
+    padding: 15px 25px;
+    background-color: #003e7e;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 5px 5px 10px gray;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.submenu-link:hover {
+    background-color: #0056a4;
+    transform: translateY(-2px);
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-item {
+    padding: 20px;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.product-item:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-item h2 {
+    font-size: 20px;
+    color: #003e7e;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    margin: 5px 0;
+    color: black;
+}
+
+.product-item a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+
+footer {
+    background-color: #003e7e;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.produtoFoto {
+    width: 100%; 
+    height: 150px; 
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+form button {
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #003e7e;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+
+form button:hover {
+    background-color: #0056a4;
+    transform: translateY(-2px);
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.delete-link {
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.delete-link:hover {
+    color: #FF6347;
+    transform: translateY(-2);
+}

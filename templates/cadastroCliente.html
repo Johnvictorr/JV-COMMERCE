@@ -1,0 +1,10 @@
+{% extends "index.html" %}
+{% block content %}
+<form action="/cadastrarClientes/event/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">
+        Enviar
+    </button>
+</form>
+{% endblock content %}
