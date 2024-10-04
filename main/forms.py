@@ -24,7 +24,7 @@ class ProdutoForm(forms.ModelForm):
 
 
             'peso': forms.NumberInput(attrs={'class': 'form-control', 
-                                             'placeholder': 'Kg',
+                                             'placeholder': '(g)',
                                              'style': 'font-family: verdana, sans-serif;'}),
 
 

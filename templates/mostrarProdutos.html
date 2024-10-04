@@ -5,7 +5,7 @@
     {% if mostrarProdutos %}
         {% for produto in mostrarProdutos %}
         <div class="product-item">
-            <h2>{{ produto.nome }}</h2>
+            <h2>{{ produto.nome }}></h2>
             <p>Preço: R$ {{ produto.preco }}</p>
             <p>Quantidade Disponível: {{ produto.quantidade }}</p><br>
             
@@ -26,7 +26,7 @@
         </div>
         {% endfor %}
     {% else %}
-        <h2>Não há produtos disponíveis</h2>
+        <h2>Sem produtos disponíveis</h2>
     {% endif %}
 </div><br>
 

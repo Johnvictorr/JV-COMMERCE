@@ -1,7 +1,7 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: whitesmoke;
-    color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #EBD3F8;
+    background: linear-gradient(90deg, #F3E9FB, #EADDF6, #DAB4EC, #C9AEE9, #B698E0, #9C7BD4);
     margin: 0;
     padding: 0;
     display: flex;
@@ -20,10 +20,10 @@ body {
 }
 
 header {
-    background-color: #003e7e;
+    background-color: #2E236C;
     color: white;
     padding: 15px 0;
-    box-shadow: 1px 1px 7px gray;
+    box-shadow: 1px 1px 7px #17153B;
 }
 
 header .container{
@@ -58,11 +58,11 @@ header nav a {
     font-size: 20px;
     padding: 20px 10px;
     transition: background-color 0.3s ease;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header nav a:hover {
-    background-color: #002b5c;
+    background-color: #433D8B;
 }
 
 main {
@@ -70,20 +70,14 @@ main {
     padding: 20px 0;
 }
 
-main .container {
-    background-color: whitesmoke;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 1px 1px 7px gray;
-}
-
 h2 {
     font-size: 30px;
-    color: #003e7e;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #003e7e;
+    color: #2E236C;
     padding-bottom: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: inline-block;
+    border-bottom: 2px solid #2E236C;
+    width: 100%;
 }
 
 ul {
@@ -97,19 +91,19 @@ ul {
     width: 94%;
     margin: 10px 0;
     padding: 15px 25px;
-    background-color: #003e7e;
+    background-color: #2E236C;
     color: white;
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 5px 5px 10px gray;
+    box-shadow: 5px 5px 10px #17153B;
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
 }
 
 .submenu-link:hover {
-    background-color: #0056a4;
+    background-color: #433D8B;
     transform: translateY(-2px);
 }
 
@@ -128,12 +122,13 @@ ul {
 }
 
 .product-item:hover {
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 12px #17153B;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .product-item h2 {
     font-size: 20px;
-    color: #003e7e;
+    color: #2E236C;
     margin-bottom: 10px;
 }
 
@@ -151,7 +146,7 @@ ul {
 
 
 footer {
-    background-color: #003e7e;
+    background-color: #2E236C;
     color: white;
     text-align: center;
     padding: 15px 0;
@@ -186,12 +181,16 @@ form input, form select, form button {
     border-radius: 5px;
     font-family: Verdana, sans-serif;
     box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px; 
 }
 
 form button {
     padding: 15px;
     margin: 10px 0;
-    background-color: #003e7e;
+    background-color: #2E236C;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
@@ -204,7 +203,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #0056a4;
+    background-color: #433D8B;
     transform: translateY(-2px);
 }
 
@@ -214,6 +213,17 @@ form button:hover {
     margin-top: 10px;
 }
 
+.edit-link {
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.edit-link:hover {
+    color: #1230AE;
+    transform: translateY(-2);
+}
+
 .delete-link {
     text-decoration: none;
     font-size: 18px;
@@ -221,6 +231,27 @@ form button:hover {
 }
 
 .delete-link:hover {
-    color: #FF6347;
+    color: #D71313;
     transform: translateY(-2);
+}
+
+input[type="file"] {
+    background-color: transparent;
+    border: none;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #2E236C;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 20px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;    
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #433D8B;
+    transition: background-color 0.3s, transform 0.3s;
+    transform: translateY(-2px);
 }
